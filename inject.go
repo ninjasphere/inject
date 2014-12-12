@@ -120,10 +120,10 @@ func (g *Graph) Provide(objects ...*Object) error {
 				}
 
 				if g.unnamedType[o.reflectType] {
-					return fmt.Errorf(
+					/*return fmt.Errorf(
 						"provided two unnamed instances of type *%s.%s",
 						o.reflectType.Elem().PkgPath(), o.reflectType.Elem().Name(),
-					)
+					)*/
 				}
 				g.unnamedType[o.reflectType] = true
 			}
